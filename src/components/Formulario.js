@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 class Formulario extends React.Component {
 
@@ -15,7 +16,7 @@ class Formulario extends React.Component {
 
 		this.props.datosConsulta(respuesta);
 
-		
+
 
 	}
 
@@ -53,6 +54,10 @@ class Formulario extends React.Component {
 			</div>
 		)
 	}
+}
+
+Formulario.propTypes = {
+	datosConsulta: PropTypes.func.idRequired
 }
 
 export default Formulario;
